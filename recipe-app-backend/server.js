@@ -10,7 +10,18 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 const MONGO_URI = process.env.MONGO_URI;
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    'https://my-recipe-app-psi.vercel.app',
+    'http://localhost:19006',
+    'http://localhost:8081',
+    'http://10.0.2.2:5001',
+    'http://192.168.1.100:5001' 
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 app.use(express.json());
 
 app.use('/api/recipes', recipeRoutes);
@@ -19,7 +30,6 @@ app.use((req, res, next) => {
   res.status(404).send('API route not found');
 });
 
-// MongoDB Connection
 mongoose.connect(MONGO_URI)
   .then(() => {
     console.log('MongoDB successfully connected!');
