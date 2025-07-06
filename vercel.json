@@ -1,21 +1,11 @@
 {
   "version": 2,
-  "builds": [
+  "projects": [
     {
-      "src": "recipe-app-frontend/package.json",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": "recipe-app-frontend/**",
-        "installCommand": "npm install",
-        "buildCommand": "npm run build:web"
-      }
+      "name": "recipe-app-frontend",
+      "rootDirectory": "recipe-app-frontend",
+      "buildCommand": "npm install && npm run build:web",
+      "outputDirectory": "dist"
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/recipe-app-frontend/dist/$1"
-    }
-  ],
-  "outputDirectory": "recipe-app-frontend/dist" 
+  ]
 }
