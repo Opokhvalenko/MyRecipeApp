@@ -2,6 +2,8 @@
 
 This is a full-stack mobile recipe application built with React Native for the frontend and Node.js (Express) with MongoDB for the backend. It allows users to view, add, edit, and delete recipes.
 
+**🚀 Live Demo:** [View Application](https://my-recipe-app-psi.vercel.app/)
+
 ## Features
 
 * **Recipe Listing:** Browse a list of all available recipes.
