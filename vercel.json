@@ -3,10 +3,11 @@
   "builds": [
     {
       "src": "recipe-app-frontend/package.json",
-      "use": "@vercel/static-build",
+      "use": "@vercel/node",
       "config": {
-        "rootDirectory": "recipe-app-frontend",
-        "distDir": "dist"
+        "includeFiles": "recipe-app-frontend/**",
+        "installCommand": "npm install",
+        "buildCommand": "npm run build:web"
       }
     }
   ],
@@ -15,5 +16,6 @@
       "src": "/(.*)",
       "dest": "/recipe-app-frontend/dist/$1"
     }
-  ]
+  ],
+  "outputDirectory": "recipe-app-frontend/dist" 
 }
