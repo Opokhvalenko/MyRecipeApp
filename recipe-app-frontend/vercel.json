@@ -1,7 +1,5 @@
 {
   "version": 2,
-  "buildCommand": "npm install && npx expo export",
-  "outputDirectory": "dist",
   "routes": [
     {
       "src": "/_expo/static/(.*)",
