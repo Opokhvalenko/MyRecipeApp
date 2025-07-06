@@ -1,0 +1,20 @@
+# .gitignore for MyRecipeApp Monorepo
+
+# Node.js
+node_modules/
+.env
+
+# React Native / Expo
+.expo/
+.DS_Store
+*.jks
+*.p12
+*.pem
+*.mobileprovision
+.env.development
+.env.production
+.env.staging
+web-build/ # Output folder for Expo Web build
+
+# macOS
+.DS_Store
