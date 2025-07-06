@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "recipe-app-frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "rootDirectory": "recipe-app-frontend",
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/recipe-app-frontend/dist/$1"
+    }
+  ]
+}
