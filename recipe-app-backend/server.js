@@ -16,7 +16,7 @@ app.use(cors({
     'http://localhost:19006',
     'http://localhost:8081',
     'http://10.0.2.2:5001',
-    'http://192.168.1.100:5001' 
+    'http://192.168.1.100:5001'
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
@@ -41,4 +41,3 @@ mongoose.connect(MONGO_URI)
     console.error('MongoDB connection error:', err);
     process.exit(1);
   });
-  
