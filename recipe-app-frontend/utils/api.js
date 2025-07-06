@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Platform } from 'react-native';
 
-const RENDER_BACKEND_URL = 'https://myrecipeapp-489g.onrender.com/api';
+const RENDER_BACKEND_URL = 'https://myrecipeapp-498g.onrender.com/api';
 
 
 const LOCAL_BACKEND_URL = Platform.OS === 'android' ? 'http://192.168.1.100:5001/api' : 'http://localhost:5001/api';
